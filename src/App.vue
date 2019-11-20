@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-    </div>
+    <navBar/>
     <router-view/>
   </div>
 </template>
-
+<script>
+import navBar from "@/components/navbar";
+export default {
+  name: "App",
+  components: {
+        navBar: navBar,
+  }
+}
+</script>script
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
