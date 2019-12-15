@@ -1,5 +1,5 @@
 <template>
-  <teamsCard :valtopass="teamsList"></teamsCard>
+  <teamsCard :teamsPrint="teamsList"></teamsCard>
 </template>
 
 <script>
