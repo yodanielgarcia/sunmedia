@@ -1,30 +1,11 @@
 # sunmedia
-
-## Project setup
-```
+Para poder realizar el estudio de la prueba es necesario correr los siguiente comandos.
+# Instalar las dependencias
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
+# correr el servidor
 npm run serve
-```
+Cuando el servidor local este arriba por favor entrar al siguiente link
+http://localhost:8080/
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# sunmedia
+**** para la vista individual de los equipos dar click en el nombre de el colegio para redirigir alli.
