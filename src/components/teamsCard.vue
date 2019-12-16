@@ -10,7 +10,8 @@
           <b-col md="12">
             <b-card-body :title="teams.abbreviation">
               <b-card-text>
-                <h3 @click="goTo(teams.id)">{{teams.school}}</h3>
+                <b-link @click="goTo(teams.id)">{{teams.school}}</b-link>
+                <h4 @click="goTo(teams.id)" v-if="teams.conference != null">Conferencia: {{teams.conference}} Division: {{teams.division}}</h4>
                 <p> Mascota {{teams.mascot}}</p>
               </b-card-text>
               <div v-bind:style="'display: inline-block; width: 100px; height: 100px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: ' + teams.color">
@@ -19,7 +20,11 @@
               </div>
               <div>
                 <b-button pill v-if="favView" @click="deleteFav(teams.id)" variant="danger">Delete</b-button>
-                <b-button pill variant="primary" @click="addTeamFavoriteList(teams.id)">Add Favorite </b-button>
+                <b-button v-b-modal.modal-1 pill variant="primary" @click="addTeamFavoriteList(teams.id)">Add Favorite </b-button>
+                <b-modal id="modal-1" title="BootstrapVue">
+                  <p class="my-4">Comentarios</p>
+                  <input type="text" v-model="coment">
+                </b-modal>
               </div>
             </b-card-body>
           </b-col>
@@ -50,7 +55,8 @@ export default {
       paginatedItems: null,
       perPage: 3,
       totalRows: null,
-      currentPage: 1
+      currentPage: 1,
+      coment: ''
     }
   },
   watch: {
