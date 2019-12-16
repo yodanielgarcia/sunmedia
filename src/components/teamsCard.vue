@@ -117,6 +117,7 @@ export default {
         index++
       });
       localStorage.setItem('favoriteList', favorileTeams);
+      this.$router.go(this.$router.currentRoute)
     }
   }
 }
