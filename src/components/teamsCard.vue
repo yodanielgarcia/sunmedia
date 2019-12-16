@@ -20,11 +20,11 @@
               </div>
               <div>
                 <b-button pill v-if="favView" @click="deleteFav(teams.id)" variant="danger">Delete</b-button>
-                <b-button v-b-modal.modal-1 pill variant="primary" @click="addTeamFavoriteList(teams.id)">Add Favorite </b-button>
-                <b-modal id="modal-1" title="BootstrapVue">
+                <b-button pill variant="primary" @click="addTeamFavoriteList(teams.id)">Add Favorite </b-button>
+                <!--<b-modal id="modal-1" title="BootstrapVue">
                   <p class="my-4">Comentarios</p>
                   <input type="text" v-model="coment">
-                </b-modal>
+                </b-modal>-->
               </div>
             </b-card-body>
           </b-col>
