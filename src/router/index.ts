@@ -5,6 +5,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'home',
+    component : () => import(/* webpackChunkName: "about" */ '../views/teamList.vue')
+  },
+  {
     path: '/teamList',
     name: 'teamList',
     component : () => import(/* webpackChunkName: "about" */ '../views/teamList.vue')
@@ -13,7 +18,13 @@ const routes = [
     path: '/favorite',
     name: 'favorite',
     component : () => import(/* webpackChunkName: "about" */ '../views/favoriteTeams.vue')
+  },
+  {
+    path: '/team/:teamId',
+    name: 'team',
+    component : () => import(/* webpackChunkName: "about" */ '../views/team.vue')
   }
+
 ]
 
 const router = new VueRouter({
