@@ -7,8 +7,6 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "postinstall": "npm run build",
-    "heroku-postbuild": "npm run build",
     "start": "node server.js"
   },
   "dependencies": {
